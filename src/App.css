@@ -6,6 +6,9 @@ body {
   color: #ffffff; /* Light text color for contrast */
   font-family: Roboto, Helvetica, Calibri, Arial, sans-serif
 }
+.clickthrough {
+        pointer-events: none;
+}
 
 .App-logo {
   height: 40vmin;
