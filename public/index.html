@@ -24,11 +24,17 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Axiom | YSWS</title>
+    <link href="%PUBLIC_URL%/prism.css" rel="stylesheet" />
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.9.1/mathquill.js" integrity="sha512-ZSR/8q1yqynaTt93e8u/PNh6BsHRI/PWgriT6xObJIt+aFlOlOHFvQUJXB/SdHdI0HoEsi1asZejMPQOQhfRsg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.9.1/mathquill.css" integrity="sha512-Gh9jugVbw863/UnmBitmARROcOkrLhMqPqbMEqwB5nfLf6g/bDEWgvPmwTav9e/s5LOwsnRhjtPSq/3yQ0RDsg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="%PUBLIC_URL%/prism.js"></script>
+
     <script>
       thingyi= () => {
         hDivUUIDs = JSON.parse(localStorage.getItem("hDivUUIDs") || "[]");
@@ -42,10 +48,12 @@
               parent.style.display = "flex";
             }
           }
+          
         });
       }catch(e){}}
       setInterval(thingyi, 100);
       thingyi();
+
 
     </script>
     <!--

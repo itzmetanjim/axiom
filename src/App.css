@@ -1,13 +1,37 @@
 .App {
   text-align: center;
 }
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 body {
-  background-color: #121212; /* Dark mode background color */
+  background-color: #000000; /* Dark mode background color */
   color: #ffffff; /* Light text color for contrast */
-  font-family: Roboto, Helvetica, Calibri, Arial, sans-serif
+  font-family: 'Roboto', Helvetica, Calibri, Arial, sans-serif;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-weight: 500; /*Lightweight style*/
+}
+pre {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  overflow-x: auto;
+  width: fit-content;
+}
+p,li {
+  font-weight: 300;
+}
+strong {
+  font-weight: 500;
 }
 .clickthrough {
         pointer-events: none;
+}
+.noclickthrough.noclickthrough {
+        pointer-events: all;
+}
+a, pre, code, button, input, textarea, select, label, option, thead, tr, p {
+  pointer-events: all;
 }
 
 .App-logo {
