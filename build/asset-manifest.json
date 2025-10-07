@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.dcf5f07b.css",
-    "main.js": "/static/js/main.3d5b671d.js",
-    "static/js/453.5d759ccc.chunk.js": "/static/js/453.5d759ccc.chunk.js",
-    "static/media/logo.png": "/static/media/logo.5b74304fddebad402c08.png",
-    "index.html": "/index.html",
-    "main.dcf5f07b.css.map": "/static/css/main.dcf5f07b.css.map",
-    "main.3d5b671d.js.map": "/static/js/main.3d5b671d.js.map",
-    "453.5d759ccc.chunk.js.map": "/static/js/453.5d759ccc.chunk.js.map"
+    "main.css": "/axiom/static/css/main.dcf5f07b.css",
+    "main.js": "/axiom/static/js/main.3080c18c.js",
+    "static/js/453.5d759ccc.chunk.js": "/axiom/static/js/453.5d759ccc.chunk.js",
+    "static/media/logo.png": "/axiom/static/media/logo.5b74304fddebad402c08.png",
+    "index.html": "/axiom/index.html",
+    "main.dcf5f07b.css.map": "/axiom/static/css/main.dcf5f07b.css.map",
+    "main.3080c18c.js.map": "/axiom/static/js/main.3080c18c.js.map",
+    "453.5d759ccc.chunk.js.map": "/axiom/static/js/453.5d759ccc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dcf5f07b.css",
-    "static/js/main.3d5b671d.js"
+    "static/js/main.3080c18c.js"
   ]
 }
