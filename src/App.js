@@ -313,6 +313,11 @@ function App() {
     console.log("Path ID: /", pathID);
     window.currentPage = page;
     window.currentPathID = pathID;
+    if (pathID.startsWith("axiom-")) {
+    const prefixLength = "axiom-".length; 
+    //this is for GH pages
+    pathID = pathID.substring(prefixLength);
+    }
     let pagediv = document.getElementById("page-" + pathID);
     if (pagediv) {
       pagediv.style.display = "block";
