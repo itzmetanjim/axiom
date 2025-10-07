@@ -325,7 +325,7 @@ function App() {
     }, []);
   return (
     <>
-    <PageDiv path="" className="App">
+    <PageDiv path="axiom-" className="App">
       
       <LayerContainer>
         <Thingy script={"3x,v,2;3x,h,2;2x,h,1"} z={1} className="clickthrough" classNameInherit="clickthrough">
@@ -357,7 +357,7 @@ function App() {
         </ThingyEach>
       </LayerContainer>
     </PageDiv>
-    <PageTemplate path="submit">
+    <PageTemplate path="axiom-submit">
       <h1>Submitting</h1>
       <p>Currently, the YSWS is not started yet. We need more RSVPs for it to start.</p>
       <p>If you are not in Hack Club yet, go to identity.hackclub.com and verify yourself first.</p>
@@ -367,12 +367,12 @@ function App() {
       <p> or paste this link: https://forms.fillout.com/t/aXkqWZoos2us into your browser.</p>
       <p>After that, join the Slack channel #axiom: <Button href="https://hackclub.slack.com/archives/C09K4HZJ2DP">Join Slack</Button></p>
     </PageTemplate>
-    <PageDiv path="404" className="App">
+    <PageDiv path="axiom-404" className="App">
     <h1>404 - Page Not Found</h1>
     <p>Sorry, the page you are looking for does not exist.</p>
     <p><Button href="/axiom/">Go to Home</Button></p>
     </PageDiv> 
-    <PageTemplate path="guides">
+    <PageTemplate path="axiom-guides">
       <h2>Guides and Tools</h2>
       <p>Here are some guides and tools to help you get started with making math/science related apps.</p>
       
@@ -398,7 +398,7 @@ print(f"Solutions: {solution}") // Solutions: [-2, 2]`}
       </code></pre>
       <p><strong>Resources:</strong> <Button href="https://docs.sympy.org/latest/index.html">Official SymPy docs</Button></p>
       </PageTemplate>
-      <PageTemplate path="guides-mathquill">
+      <PageTemplate path="axiom-guides-mathquill">
         <a href="/axiom/guides" style={{ color: '#64b5f6', textDecoration: 'underline', fontSize: "0.8rem" }}>Return to guides</a>
         <h1>MathQuill guide</h1>
         <p>This is a simple template to get you started with MathQuill.</p>
@@ -447,7 +447,7 @@ print(f"Solutions: {solution}") // Solutions: [-2, 2]`}
         </ul>
         
       </PageTemplate>
-      <PageTemplate path="rewards">
+      <PageTemplate path="axiom-rewards">
         <h1>Rewards</h1>
         <h2>Choose Your Reward</h2>
         <p>Code hours to earn rewards! Any remaining hours beyond your chosen reward go toward grants or additional items.</p>
@@ -557,7 +557,7 @@ print(f"Solutions: {solution}") // Solutions: [-2, 2]`}
         <p><strong>Note:</strong> Any remaining hours beyond your chosen reward can be applied toward grants or additional items from the same or a different category.</p>
         
       </PageTemplate>
-    <PageTemplate path="faq">
+    <PageTemplate path="axiom-faq">
       <h1>FAQ</h1>
       <h3>Who can join?</h3>
       <p>A: Anyone who is 18 or under and eligible for Hack Club can join. If you're not in Hack Club yet, you can sign up at identity.hackclub.com.</p>
