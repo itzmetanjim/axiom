@@ -256,7 +256,7 @@ function PageTemplate({children,path}){
               
               <div style={{ flex: 1, display: 'flex', justifyContent: 'left', alignItems: 'left', color: 'white', margin: '50px' }}>
                  <div>
-                  <a href="/" style={{ color: '#64b5f6', textDecoration: 'underline', fontSize: "0.8rem" }}>Return to homepage</a>
+                  <a href="/axiom/" style={{ color: '#64b5f6', textDecoration: 'underline', fontSize: "0.8rem" }}>Return to homepage</a>
                   {children}
                  </div>
               </div>
@@ -313,11 +313,6 @@ function App() {
     console.log("Path ID: /", pathID);
     window.currentPage = page;
     window.currentPathID = pathID;
-    if (pathID.startsWith("axiom-")) {
-    const prefixLength = "axiom-".length; 
-    //this is for GH pages
-    pathID = pathID.substring(prefixLength);
-    }
     let pagediv = document.getElementById("page-" + pathID);
     if (pagediv) {
       pagediv.style.display = "block";
@@ -348,9 +343,9 @@ function App() {
                  </p>
                  <p><strong>RSVP so that this YSWS starts! <Responses/> RSVPs submitted!</strong></p>
                  <p style={{fontSize:"0.8rem"}}>Only for students aged 18 or under who are eligible for <a href="https://hackclub.com" style={{color:"lightblue"}}>Hack Club</a>.</p>
-                 <p> <Button href="/rewards">Rewards</Button> <Button href="/submit">Submit</Button></p>
+                 <p> <Button href="/axiom/rewards">Rewards</Button> <Button href="/axiom/submit">Submit</Button></p>
                  <p><Button href="https://forms.fillout.com/t/aXkqWZoos2us"><strong>RSVP!</strong></Button> <Button href="https://hackclub.slack.com/archives/C09K4HZJ2DP">Join Slack</Button></p>
-                 <p><Button href="/guides">Guides and tools</Button> <Button href="/faq">FAQ</Button></p>
+                 <p><Button href="/axiom/guides">Guides and tools</Button> <Button href="/axiom/faq">FAQ</Button></p>
                  <p><Button href="https://bananahannah7.github.io/drone_notebook/">Example project (not by me) </Button></p>
                  </div>
               </div>
@@ -375,7 +370,7 @@ function App() {
     <PageDiv path="404" className="App">
     <h1>404 - Page Not Found</h1>
     <p>Sorry, the page you are looking for does not exist.</p>
-    <p><Button href="/">Go to Home</Button></p>
+    <p><Button href="/axiom/">Go to Home</Button></p>
     </PageDiv> 
     <PageTemplate path="guides">
       <h2>Guides and Tools</h2>
@@ -384,7 +379,7 @@ function App() {
       <h3>MathQuill</h3>
       <p>This is a library for displaying LaTeX math in web applications.</p>
 
-      <p><strong>Resources:</strong><Button href="/guides/mathquill">MathQuill template</Button> <Button href="https://docs.mathquill.com/en/latest/Getting_Started/">Official MathQuill docs (more advanced)</Button></p>
+      <p><strong>Resources:</strong><Button href="/axiom/guides/mathquill">MathQuill template</Button> <Button href="https://docs.mathquill.com/en/latest/Getting_Started/">Official MathQuill docs (more advanced)</Button></p>
       <h3>SymPy</h3>
       <p>This is an easy purepython CAS library. You may want to consider something else if you need more speed, but this is the easiest.</p>
       <p>Example code</p>
@@ -404,7 +399,7 @@ print(f"Solutions: {solution}") // Solutions: [-2, 2]`}
       <p><strong>Resources:</strong> <Button href="https://docs.sympy.org/latest/index.html">Official SymPy docs</Button></p>
       </PageTemplate>
       <PageTemplate path="guides-mathquill">
-        <a href="/guides" style={{ color: '#64b5f6', textDecoration: 'underline', fontSize: "0.8rem" }}>Return to guides</a>
+        <a href="/axiom/guides" style={{ color: '#64b5f6', textDecoration: 'underline', fontSize: "0.8rem" }}>Return to guides</a>
         <h1>MathQuill guide</h1>
         <p>This is a simple template to get you started with MathQuill.</p>
         <p>This is assuming static HTML/CSS/JS.</p>
