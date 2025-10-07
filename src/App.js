@@ -570,7 +570,7 @@ print(f"Solutions: {solution}") // Solutions: [-2, 2]`}
       <p>A: Not really, but you do need to set up Hackatime. <Button href="https://hackatime.hackclub.com/my/wakatime_setup">Setup</Button></p>
       <p>You can use Codespaces if you want.</p>
       <h3>I have more questions!</h3>
-      <p>Ask in the Slack channel #axiom<p>
+      <p>Ask in the Slack channel #axiom</p>
 
     </PageTemplate>
     </>
