@@ -306,6 +306,12 @@ function Responses() {
 function App() {
   useEffect(() => {
     var currentURL = window.location.href;
+    var redirect = sessionStorage.redirect;
+    delete sessionStorage.redirect;
+    if (redirect && redirect != window.location.href) {
+      currentURL=redirect
+      console.log("Changed current URL variable")
+    }
     console.log("Current URL:", currentURL);
     var page = currentURL.split("/").slice(3);
     var pathID = page.join("/").replace(/\W+/g, '-').toLowerCase();

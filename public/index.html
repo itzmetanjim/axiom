@@ -26,6 +26,17 @@
     -->
     <title>Axiom | YSWS</title>
     <link href="%PUBLIC_URL%/prism.css" rel="stylesheet" />
+    <!-- IF IT DOES NOT WORK THEN UNCOMMENT
+    <script>
+      (function(){
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect != location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script> 
+    -->
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -34,6 +45,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.9.1/mathquill.css" integrity="sha512-Gh9jugVbw863/UnmBitmARROcOkrLhMqPqbMEqwB5nfLf6g/bDEWgvPmwTav9e/s5LOwsnRhjtPSq/3yQ0RDsg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="%PUBLIC_URL%/prism.js"></script>
+
 
     <script>
       thingyi= () => {
