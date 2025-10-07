@@ -305,13 +305,19 @@ function Responses() {
 //let logosrc = "logo.png"
 function App() {
   useEffect(() => {
-    var currentURL = window.location.href;
+    var currentURL = window.location.href.substring(1);
     var redirect = sessionStorage.redirect;
+    var hash = window.location.hash;
     delete sessionStorage.redirect;
-    if (redirect && redirect != window.location.href) {
-      currentURL=redirect
-      console.log("Changed current URL variable")
+    if (hash && hash != "/"){
+      currentURL = "https://itzmetanjim.github.io/axiom"+hash
+      console.log("Changed current URL variable because hash was found",hash)
     }
+    else if (redirect && redirect != window.location.href) {
+      currentURL=redirect
+      console.log("Changed current URL variable because redirect was found")
+    }
+    
     console.log("Current URL:", currentURL);
     var page = currentURL.split("/").slice(3);
     var pathID = page.join("/").replace(/\W+/g, '-').toLowerCase();

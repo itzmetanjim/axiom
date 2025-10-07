@@ -1,13 +1,37 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-g">
+    <meta charset="utf-8">
     <title>Redirecting...</title>
-    <script>
-      sessionStorage.redirect = location.href;
+    <script type="text/javascript">
+      // Don't execute the script if the page is loaded in an iframe.
+      // This is a security measure to prevent "clickjacking".
+      if (window.top !== window.self) {
+        window.top.location.replace(window.self.location.href);
+      }
+
+      // Get the current URL path, search query, and hash.
+      const path = window.location.pathname;
+      const search = window.location.search;
+      const hash = window.location.hash;
+
+      // The repo name is the first segment of the path.
+      // e.g., for "/axiom/page", it's "axiom".
+      const repoName = path.substring(1, path.indexOf('/', 1));
+
+      // The route is the part of the path *after* the repo name.
+      // e.g., for "/axiom/page/about", the route is "/page/about".
+      const route = path.substring(path.indexOf('/', 1));
+
+      // Construct the new URL.
+      // It combines the repo name, a hash, the intended route, and any search or hash params.
+      const newUrl = `/${repoName}/#${route}${search}${hash}`;
+      sessionStorage.redirect=window.location.href
+      // Redirect the user to the new hash-based URL.
+      window.location.replace(newUrl);
     </script>
-    <meta http-equiv="refresh" content="0;URL='/?'"></meta>
   </head>
   <body>
+    <!-- You can add a "Redirecting..." message here if you want. -->
   </body>
 </html>
