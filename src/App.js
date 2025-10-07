@@ -341,11 +341,11 @@ function App() {
                  <p>Make any math or science related app and earn 5$/hour grant for anything math/science/programming
                   related or other special rewards.
                  </p>
-                 <p><strong>RSVP so that this YSWS starts! <Responses/> RSVPS submitted!</strong></p>
+                 <p><strong>RSVP so that this YSWS starts! <Responses/> RSVPs submitted!</strong></p>
                  <p style={{fontSize:"0.8rem"}}>Only for students aged 18 or under who are eligible for <a href="https://hackclub.com" style={{color:"lightblue"}}>Hack Club</a>.</p>
                  <p> <Button href="/rewards">Rewards</Button> <Button href="/submit">Submit</Button></p>
                  <p><Button href="https://forms.fillout.com/t/aXkqWZoos2us"><strong>RSVP!</strong></Button> <Button href="https://hackclub.slack.com/archives/C09K4HZJ2DP">Join Slack</Button></p>
-                 <p><Button href="/guides">Guides and tools</Button><Button href="/faq">FAQ</Button></p>
+                 <p><Button href="/guides">Guides and tools</Button> <Button href="/faq">FAQ</Button></p>
                  <p><Button href="https://bananahannah7.github.io/drone_notebook/">Example project (not by me) </Button></p>
                  </div>
               </div>
