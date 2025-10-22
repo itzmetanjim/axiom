@@ -436,10 +436,11 @@ print(f"Solutions: {solution}") // Solutions: [-2, 2]`}
         <p>Include MathQuill CSS and JS in your HTML file. You can use the CDN links</p>
         <pre className="language-html"><code>{`
     <!-- in <head> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+ 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.9.1/mathquill.js" integrity="sha512-ZSR/8q1yqynaTt93e8u/PNh6BsHRI/PWgriT6xObJIt+aFlOlOHFvQUJXB/SdHdI0HoEsi1asZejMPQOQhfRsg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mathquill/0.9.1/mathquill.css" integrity="sha512-Gh9jugVbw863/UnmBitmARROcOkrLhMqPqbMEqwB5nfLf6g/bDEWgvPmwTav9e/s5LOwsnRhjtPSq/3yQ0RDsg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script>
+       <script>
         MQ = MathQuill.getInterface(2);
     </script>
         `}</code></pre>
@@ -470,7 +471,47 @@ print(f"Solutions: {solution}") // Solutions: [-2, 2]`}
   });
 </script>
         `}</code></pre>
-        <p><strong>Important:</strong></p>
+        <p>
+        <h2>Template</h2>  
+        <p>If you don't want to include something new in your script tag every time you want to make a math field, or just want something simpler, you can use this.</p>
+        <p>Include MathQuill in your <code>{`<head>`}</code> tag as in the previous section, then paste this at the end of your body tag:</p>
+        <pre>
+          <code>
+            {`
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var statics = document.querySelectorAll('.MQStatic');
+  statics.forEach(function(i) { MQ.StaticMath(i); });
+
+  var editables = document.querySelectorAll('.MathField');
+  editables.forEach(function(i) {
+    var answerMathField = MQ.MathField(i, {
+      handlers: {
+        edit: function() {
+          var enteredMath = answerMathField.latex();
+          var cb = i.dataset.callback;
+          if (cb && typeof window[cb] === 'function') {
+            window[cb](enteredMath);
+          }
+        }
+      }
+    });
+  });
+});
+</script>
+`}
+          </code>
+        </pre>
+        <p>Use as follows:</p>
+        <ul>
+          <li>To make a static math field, simply make a <code>span</code> or <code>div</code> with the class <span><code>MQStatic</code></span>.</li>
+          <li>Making an editable field is also easy. Use the <code>MathField</code> class instead and set the <code>data-callback</code> to the name of the function you want to call (with the latex as the input).<br></br>
+          The function has to be global. To make it globa;, do something like <code>window.functionName = functionName</code></li>
+        </ul>
+        <p>Example: <Button href="/axiom/mq_example.html">Example (interactive)</Button> <Button href="/axiom/mq_example.txt">Example (code)</Button></p>
+
+        
+        <strong>Important:</strong></p>
         <ul>
           <li>Make sure to include jQuery before MathQuill.</li>
           <li>Use the correct MathQuill version.</li>

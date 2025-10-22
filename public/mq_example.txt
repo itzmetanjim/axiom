@@ -1,0 +1,51 @@
+<!--
+   +----------------------------------------------------------+   
+   | Go back to the website: tanjim.org/axiom/mq_example.html |
+   | or just change the .txt to .html in the URL              |
+   +----------------------------------------------------------+ 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathQuill Template</title>
+    <!--ALWAYS LOAD jQuery FIRST-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="/mathquill-0.10.1/mathquill.js"></script>
+    <link rel="stylesheet" href="/mathquill-0.10.1/mathquill.css" />
+<script>
+        MQ = MathQuill.getInterface(2);
+    </script>
+</head>
+<body>
+    
+<p>Editable field:</p>
+<script>window.setLatexDisplay=function(x){document.getElementById("display").innerText=x}</script>
+<div class="MathField" data-callback="setLatexDisplay">32\ \equiv\ 2\ \left(\text{mod}\ 3\right)</div>
+<p>Latex output: <span id="display"></span></p>
+<p>The chain rule: <span class="MQStatic">\frac{dy}{dx}=\frac{dy}{dz}\cdot\frac{dz}{dx}</span></p>
+<a href="mq_example.txt">View the website code</a>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var statics = document.querySelectorAll('.MQStatic');
+  statics.forEach(function(i) { MQ.StaticMath(i); });
+
+  var editables = document.querySelectorAll('.MathField');
+  editables.forEach(function(i) {
+    var answerMathField = MQ.MathField(i, {
+      handlers: {
+        edit: function() {
+          var enteredMath = answerMathField.latex();
+          var cb = i.dataset.callback;
+          if (cb && typeof window[cb] === 'function') {
+            window[cb](enteredMath);
+          }
+        }
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>
