@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+# Required permissions for gh-pages to push
+permissions:
+  contents: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -28,6 +32,4 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
       
       - name: Deploy to GitHub Pages
-        run: npm run deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run deploy -- -u "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com"
