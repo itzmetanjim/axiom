@@ -69,8 +69,7 @@ a, pre, code, button, input, textarea, select, label, option, thead, tr, p {
   }
 }
 
-@media only screen and (min-width: 600px) {
-  .absolute-container {
+.absolute-container {
   position: relative;
   height: 100vh;
   width: 100vw;
@@ -83,10 +82,5 @@ a, pre, code, button, input, textarea, select, label, option, thead, tr, p {
   left: 0;
   width: 100vw;
   height: 100vh;
-}
-.hify{
-  flex-direction: column;
-  display: flex;
-}
 }
 

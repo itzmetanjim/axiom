@@ -56,7 +56,8 @@
           if (elem) {
             const parent = elem.parentElement;
             if (parent) {
-              parent.classList.add("hify")
+              parent.style.flexDirection = "column";
+              parent.style.display = "flex";
             }
           }
           

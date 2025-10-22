@@ -31,7 +31,7 @@ function Divider({type, children, size}) {
   if (type ==="h"){
     const uuid = "dividerUUID" + crypto.randomUUID();
     return (
-      <div style={{width: '100%', flex: lsize}} id={uuid} class="Divider DividerH">{children}</div>
+      <div style={{width: '100%', flex: lsize}} id={uuid}>{children}</div>
     );
   } else if (type === "v") {
     const uuid = "dividerUUID" + crypto.randomUUID();
@@ -41,7 +41,6 @@ function Divider({type, children, size}) {
       <div
         style={{height: '100%', flex: lsize }}
         id={uuid}
-        class="Divider DividerV"
         onLoad={(e) => {
           const parent = e.target.parentElement;
           if (parent) {
