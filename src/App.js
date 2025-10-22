@@ -350,7 +350,7 @@ function App() {
               <div style={{color: 'white', margin: '50px' }} class="FlexJCAC">
                  <div>
                   {/* c75d53ff-5b68-455e-ab8d-abc94dda6548 */}
-                 <h1>Make a math/science related app,<br/> get rewards!</h1>
+                 <h1>Make a math/science related app,<br></br> get rewards!</h1>
                  <p>Make any math or science related app and earn 5$/hour grant for anything math/science/programming
                   related or other special rewards.
                  </p>
@@ -372,10 +372,10 @@ function App() {
       </span>
       <span className="Mobile">
         <img src={logo} alt="Axiom Logo" width="400" class="MLAuto" />
-        <br/>
+        <br>
         <div>
         {/* c75d53ff-5b68-455e-ab8d-abc94dda6548 */}
-        <h1>Make a math/science related app,<br/> get rewards!</h1>
+        <h1>Make a math/science related app,<br></br> get rewards!</h1>
         <p>Make any math or science related app and earn 5$/hour grant for anything math/science/programming
         related or other special rewards.
         </p>
