@@ -310,11 +310,11 @@ function App() {
     var redirect = sessionStorage.redirect;
     var hash = window.location.hash;
     delete sessionStorage.redirect;
-    if (hash && hash !== "/"){
+    if (hash && hash != "/"){
       currentURL = "https://itzmetanjim.github.io/axiom"+hash
       console.log("Changed current URL variable because hash was found",hash)
     }
-    else if (redirect && redirect !== window.location.href) {
+    else if (redirect && redirect != window.location.href) {
       currentURL=redirect
       console.log("Changed current URL variable because redirect was found")
     }
