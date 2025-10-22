@@ -64,7 +64,7 @@ a, pre, code, button, input, textarea, select, label, option, thead, tr, p {
   height: 100vh;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .Mobile {
     display: unset;
   }
@@ -73,7 +73,7 @@ a, pre, code, button, input, textarea, select, label, option, thead, tr, p {
   }
 }
 
-@media (min-width: 601px) {
+@media (min-width: 769px) {
   .PC {
     display: block;
   }
