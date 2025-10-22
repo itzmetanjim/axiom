@@ -380,6 +380,7 @@ function App() {
         related or other special rewards.
         </p>
         <p><strong>RSVP so that this YSWS starts! <Responses/> RSVPs submitted!</strong></p>
+        <p>Hackatime time tracking is required.</p>
         <p style={{fontSize:"0.8rem"}}>Only for students aged 18 or under who are eligible for <a href="https://hackclub.com" style={{color:"lightblue"}}>Hack Club</a>.</p>
         <p> <Button href="/axiom/rewards">Rewards</Button> <Button href="/axiom/submit">Submit</Button></p>
         <p><Button href="https://forms.fillout.com/t/aXkqWZoos2us"><strong>RSVP!</strong></Button> <Button href="https://hackclub.slack.com/archives/C09K4HZJ2DP">Join Slack</Button></p>
