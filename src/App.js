@@ -258,6 +258,7 @@ function PageTemplate({children,path}){
               <div style={{ flex: 1, display: 'flex', justifyContent: 'left', alignItems: 'left', color: 'white', margin: '50px' }}>
                  <div>
                   <a href="/axiom/" style={{ color: '#64b5f6', textDecoration: 'underline', fontSize: "0.8rem" }}>Return to homepage</a>
+                  &nbsp;
                   {children}
                  </div>
               </div>
@@ -408,8 +409,18 @@ function App() {
       
       <h3>MathQuill</h3>
       <p>This is a library for displaying LaTeX math in web applications.</p>
-
+      
       <p><strong>Resources:</strong><Button href="/axiom/guides/mathquill">MathQuill template</Button> <Button href="https://docs.mathquill.com/en/latest/Getting_Started/">Official MathQuill docs (more advanced)</Button></p>
+
+    <h3>LaTeX</h3>
+    <p>This is the way you write math (and any kind of scientific document/research paper). If you don't know how to use this, you should check out the guide.</p>
+    <p><strong>Resources:</strong> 
+    <Button href="/axiom/guides/latex"> Easy LaTeX guide for math</Button>
+    <Button href="https://www.overleaf.com/">Overleaf (the thing you use to edit LaTeX)</Button>
+    <Button href="https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes">Overleaf's LaTeX guide</Button>
+    <Button href="https://www.latex-project.org/help/documentation/">Official LaTeX docs (only if you are desperate)</Button>
+    </p>
+
       <h3>SymPy</h3>
       <p>This is an easy purepython CAS library. You may want to consider something else if you need more speed, but this is the easiest.</p>
       <p>Example code</p>
@@ -432,7 +443,7 @@ print(f"Solutions: {solution}") // Solutions: [-2, 2]`}
         <a href="/axiom/guides" style={{ color: '#64b5f6', textDecoration: 'underline', fontSize: "0.8rem" }}>Return to guides</a>
         <h1>MathQuill guide</h1>
         <p>This is a simple template to get you started with MathQuill.</p>
-        <p>This is assuming static HTML/CSS/JS.</p>
+        <p>This is assuming static HTML/CSS/JS and knowledge of LaTeX. If you don't know LaTeX, check our guide: <Button href="/axiom/guides/latex">LaTeX guide</Button></p>
         <p>Include MathQuill CSS and JS in your HTML file. You can use the CDN links</p>
         <pre className="language-html"><code>{`
     <!-- in <head> -->
@@ -518,6 +529,36 @@ document.addEventListener('DOMContentLoaded', function() {
         </ul>
         
       </PageTemplate>
+      <PageTemplate path="axiom-guides-latex">
+        &nbsp;<a href="/axiom/guides" style={{ color: '#64b5f6', textDecoration: 'underline', fontSize: "0.8rem" }}>Return to guides</a>
+        <h1>LaTeX</h1>
+        <p>First, visit our MathQuill example (you don't need to look at the code now): <Button href="/axiom/mq_example.html">Visit it!</Button></p>
+        <p>You should see an editable field:</p>
+        <img src="/axiom/latex_editable.png" alt="LaTeX editable field example" width="300" />
+        <p>Try typing math like normal, using expressions like  fractions, powers, parentheses, operators, functions (sin,cos) etc. You should see the output change.</p>
+        <p>Doing this, you can already get a feel of how LaTeX works.</p>
+        <ul>
+          <li>Curly braces and backslashes work a bit like HTML.</li>
+          <li>Fractions are denoted using the <code>{`\\frac{}{}`}</code> operator, where the first argument is the numerator and the second is the denominator.</li>
+          <li>Exponents are denoted using <code>{`^`}</code> like normal, but sometimes curly braces have to be used for the base and exponent.</li>
+          <li>Parentheses need to be indicated like so: <code>{`\\left(`}</code> and <code>{`\\right)`}</code>.</li>
+          <li>The same actually applies to all brackets. So <code>{`\\left( \\left[ \\left\\{`}</code> all work. Note that the curly brace had to be escaped.</li>
+        </ul>
+        <p>But there are more things available in LaTeX than these in a complete document. Open up Overleaf, the LaTeX document editor.<Button href="https://overleaf.com">Open Overleaf</Button></p>
+        <p>Login and create a blank project. It should look like this:</p>
+        <img src="/axiom/overleaf_blank.png" alt="Overleaf blank project" width="600" />
+        <p>You will notice there are some things prefilled in. This is because you are now editing a full document, not just a single expression.</p>
+        <p>The <code>{`\\begin{document}`}</code> and <code>{`\\end{document}`}</code> indicate where the document starts and ends. </p>
+        <p>You can use the visual editor here to test more advanced features of latex.</p>
+        <ul>
+          <li>Bold text: <code>{`\\textbf{...}`}</code></li>
+          <li>Italics: <code>{`\\emph{...}`}</code></li>
+          <li>Inline math: <code>{`$ ... $`}</code> — e.g. <code>{`$e^{i\\pi} + 1 = 0$`}</code></li>
+          <li>Display math: <code>{`\\[ ... \\]`}</code> or <code>{`$$ ... $$`}</code> for larger centered equations</li>
+        </ul>
+        
+        
+      </PageTemplate>
       <PageTemplate path="axiom-rewards">
         <h1>Rewards</h1>
         <h2>Choose Your Reward</h2>
@@ -541,7 +582,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <tr>
               <td style={{border: '1px solid #ddd', padding: '12px'}}>Raspberry Pi 4B Kit (2GB RAM)</td>
               <td style={{border: '1px solid #ddd', padding: '12px'}}>5+ hours</td>
-              <td style={{border: '1px solid #ddd', padding: '12px'}}>Complete kit included</td>
+              <td style={{border: '1px solid </PageTemplate>#ddd', padding: '12px'}}>Complete kit included</td>
             </tr>
             <tr>
               <td style={{border: '1px solid #ddd', padding: '12px'}}>RPi 5 Kit (4GB RAM)</td>
