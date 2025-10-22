@@ -31,7 +31,7 @@ function Divider({type, children, size}) {
   if (type ==="h"){
     const uuid = "dividerUUID" + crypto.randomUUID();
     return (
-      <div style={{width: '100%', flex: lsize}} id={uuid} class="Divider DividerH">{children}</div>
+      <div style={{ flex: lsize}} id={uuid} class="Divider DividerH">{children}</div>
     );
   } else if (type === "v") {
     const uuid = "dividerUUID" + crypto.randomUUID();
@@ -39,7 +39,7 @@ function Divider({type, children, size}) {
     localStorage.setItem("hDivUUIDs", JSON.stringify(hDivUUIDs));
     return (
       <div
-        style={{height: '100%', flex: lsize }}
+        style={{ flex: lsize }}
         id={uuid}
         class="Divider DividerV"
         onLoad={(e) => {
@@ -253,9 +253,9 @@ function PageTemplate({children,path}){
       <LayerContainer>
         <Thingy script={"1x,v,1;3x,h,2;2x,h,1"} z={1} className="clickthrough" classNameInherit="clickthrough">
           <ColoredRoundedSquare marginLeft="20px">
-            <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'left', width: '100%' }}>
+            <div class="Style1">
               
-              <div style={{ flex: 1, display: 'flex', justifyContent: 'left', alignItems: 'left', color: 'white', margin: '50px' }}>
+              <div class="Style2">
                  <div>
                   <a href="/axiom/" style={{ color: '#64b5f6', textDecoration: 'underline', fontSize: "0.8rem" }}>Return to homepage</a>
                   {children}
@@ -343,11 +343,11 @@ function App() {
       <LayerContainer>
         <Thingy script={"3x,v,2;3x,h,2;2x,h,1"} z={1} className="clickthrough" classNameInherit="clickthrough">
           <ColoredRoundedSquare pointerEvents={"none"}>
-            <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', width: '100%' }}>
-              <div style={{ flex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <img src={logo} alt="Axiom Logo" width="400" style={{ marginLeft: 'auto' }} />
+            <div class="FlexRowCenterWFull">
+              <div class="FlexJCAC"}>
+                <img src={logo} alt="Axiom Logo" width="400" class="MLAuto" />
               </div>
-              <div style={{ flex: 1, display: 'flex', justifyContent: 'left', alignItems: 'left', color: 'white', margin: '50px' }}>
+              <div style={{color: 'white', margin: '50px' }} class="FlexJCAC">
                  <div>
                   {/* c75d53ff-5b68-455e-ab8d-abc94dda6548 */}
                  <h1>Make a math/science related app,<br></br> get rewards!</h1>
