@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/axiom/static/css/main.c1612d24.css",
-    "main.js": "/axiom/static/js/main.3cdf0118.js",
+    "main.js": "/axiom/static/js/main.21588259.js",
     "static/js/453.5d759ccc.chunk.js": "/axiom/static/js/453.5d759ccc.chunk.js",
     "static/media/logo.png": "/axiom/static/media/logo.5b74304fddebad402c08.png",
     "index.html": "/axiom/index.html",
     "main.c1612d24.css.map": "/axiom/static/css/main.c1612d24.css.map",
-    "main.3cdf0118.js.map": "/axiom/static/js/main.3cdf0118.js.map",
+    "main.21588259.js.map": "/axiom/static/js/main.21588259.js.map",
     "453.5d759ccc.chunk.js.map": "/axiom/static/js/453.5d759ccc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c1612d24.css",
-    "static/js/main.3cdf0118.js"
+    "static/js/main.21588259.js"
   ]
 }
