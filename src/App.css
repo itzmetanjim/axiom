@@ -124,20 +124,6 @@ align-items: left;
 color: white;
 margin: 50px;
 }
-.PC{
-  display:block
-}
-.Mobile{
-  display:none
-}
-}
-@media only screen and (max-width:599px){
-  .PC{
-    display:none
-  }
-  .Mobile{
-    display:block
-  }
 }
 .Style2{
   color: white;
