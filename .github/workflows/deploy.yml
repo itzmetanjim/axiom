@@ -32,4 +32,4 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
       
       - name: Deploy to GitHub Pages
-        run: npm run deploy -- --repo=https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+        run: npm run deploy -- -u "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com"
