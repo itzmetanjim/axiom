@@ -88,45 +88,5 @@ a, pre, code, button, input, textarea, select, label, option, thead, tr, p {
   flex-direction: column;
   display: flex;
 }
-.DividerH{
-  width: 100%;
-}
-.DividerV{
-  height: 100%;
-}
-.Style1{
-  display: 'flex';
-  flex-direction: 'row'; 
-  align-items: 'left'; 
-  width: '100%' ;
-}
-.FlexRowCenterWFull{
-    display: 'flex';
-  flex-direction: 'row'; 
-  align-items: 'center'; 
-  width: '100%' ;
-}
-.FlexJCAC{
- flex: 1;
-  display: 'flex';
-  justify-content: 'center';
-  align-items: 'center';
-}
-.MLAuto{
-  margin-left:auto;
-}
-
-.Style2{
-flex: 1;
-display: flex;
-justify-content: left;
-align-items: left;
-color: white;
-margin: 50px;
-}
-}
-.Style2{
-  color: white;
-margin: 50px;
 }
 
