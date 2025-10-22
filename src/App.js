@@ -339,12 +339,12 @@ function App() {
   return (
     <>
     <PageDiv path="axiom-" className="App">
-      
+      <span className="PC">
       <LayerContainer>
         <Thingy script={"3x,v,2;3x,h,2;2x,h,1"} z={1} className="clickthrough" classNameInherit="clickthrough">
           <ColoredRoundedSquare pointerEvents={"none"}>
             <div class="FlexRowCenterWFull">
-              <div class="FlexJCAC"}>
+              <div class="FlexJCAC">
                 <img src={logo} alt="Axiom Logo" width="400" class="MLAuto" />
               </div>
               <div style={{color: 'white', margin: '50px' }} class="FlexJCAC">
@@ -369,6 +369,24 @@ function App() {
           <ColorOnHover></ColorOnHover>
         </ThingyEach>
       </LayerContainer>
+      </span>
+      <span className="Mobile">
+        <img src={logo} alt="Axiom Logo" width="400" class="MLAuto" />
+        <br>
+        <div>
+        {/* c75d53ff-5b68-455e-ab8d-abc94dda6548 */}
+        <h1>Make a math/science related app,<br></br> get rewards!</h1>
+        <p>Make any math or science related app and earn 5$/hour grant for anything math/science/programming
+        related or other special rewards.
+        </p>
+        <p><strong>RSVP so that this YSWS starts! <Responses/> RSVPs submitted!</strong></p>
+        <p style={{fontSize:"0.8rem"}}>Only for students aged 18 or under who are eligible for <a href="https://hackclub.com" style={{color:"lightblue"}}>Hack Club</a>.</p>
+        <p> <Button href="/axiom/rewards">Rewards</Button> <Button href="/axiom/submit">Submit</Button></p>
+        <p><Button href="https://forms.fillout.com/t/aXkqWZoos2us"><strong>RSVP!</strong></Button> <Button href="https://hackclub.slack.com/archives/C09K4HZJ2DP">Join Slack</Button></p>
+        <p><Button href="/axiom/guides">Guides and tools</Button> <Button href="/axiom/faq">FAQ</Button></p>
+        <p><Button href="https://bananahannah7.github.io/drone_notebook/">Example project (not by me) </Button></p>
+        </div>
+      </span>
     </PageDiv>
     <PageTemplate path="axiom-submit">
       <h1>Submitting</h1>
