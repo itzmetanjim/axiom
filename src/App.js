@@ -325,6 +325,9 @@ function App() {
     var pathID = page.join("/").replace(/\W+/g, '-').toLowerCase();
     console.log("Page:", page);
     console.log("Path ID: /", pathID);
+    if(["-","/","--",""].includes(pathID)){
+      pathID = "axiom-";
+    }
     window.currentPage = page;
     window.currentPathID = pathID;
     let pagediv = document.getElementById("page-" + pathID);
@@ -355,6 +358,7 @@ function App() {
                  <p>Make any math or science related app and earn 5$/hour grant for anything math/science/programming
                   related or other special rewards.
                  </p>
+                 <h3>Hackatime time tracking is required.</h3>
                  <p><strong>RSVP so that this YSWS starts! <Responses/> RSVPs submitted!</strong></p>
                  <p style={{fontSize:"0.8rem"}}>Only for students aged 18 or under who are eligible for <a href="https://hackclub.com" style={{color:"lightblue"}}>Hack Club</a>.</p>
                  <p> <Button href="/axiom/rewards">Rewards</Button> <Button href="/axiom/submit">Submit</Button></p>
